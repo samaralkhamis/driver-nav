@@ -8,6 +8,10 @@ function arr_re(array) {
     return arr;
 }
 console.log(arr_re([2,4,6,1,6]));
+let ar=document.getElementById('array');
+ar.innerHTML='Q1 :please make the reverse for this array with out using buildin fun [2,4,6,1,6] :' ;
+let revers = document.getElementById('q1');
+revers.innerHTML='the reverse array solution is : [ ' +arr_re([2,4,6,1,6])+ ' ]';
 
 ///////////////////////////////////////////////////////
 function uppercaseWords(string){
@@ -21,10 +25,14 @@ function uppercaseWords(string){
     console.log(words.join(" "));
 }
 uppercaseWords('the quick brown fox');
-uppercaseWords("the car drove fast");
+let c= uppercaseWords("the car drove fast");
+
+let upperCase = document.getElementById('q2');
+upperCase.textContent=` Q2: ` +uppercaseWords("the car drove fast");
+
 ///////////////////////////////////////////////////////////
 
- let str="ABCDCBA"
+ let str="ABCDCBA";
  console.log(str);
  palindrome(str);
 
@@ -34,4 +42,25 @@ for (let i= 0; i < leng; i++) {
     if (word[i] !== word.lengnth-1){
         console.log(`the ${word[i]} == ${word.lengnth-1} `);
     }}
-console.log ("the word is palindrome" );}
+return("the word is palindrome" );}
+
+let palindrom = document.getElementById('q3');
+palindrom.innerHTML=`Q3: make function to chek if str=\"ABCDCBA\" is palindrome witout using bildin function the solution was it,s : ${palindrome(str)}`;
+
+/////////////////////////////////////////////////////////////////
+function dscendingSort(array) {
+    for (let i = 1; i < array.length; i++) {
+        let x = array[i];
+        for (var j = i - 1; j >= 0 && (array[j] < x); j--) {
+            array[j + 1] = array[j];
+        }
+        array[j + 1] =x;
+    }
+    return array;
+}
+  
+  var numbers = [12, 10, 15, 11, 14, 13, 16];
+  dscendingSort(numbers);
+  console.log(numbers);
+  let dscendingSor = document.getElementById('q4');
+  dscendingSor.innerHTML=`Q4 :[12, 10, 15, 11, 14, 13, 16] make function to dscendingSort the array` + dscendingSort(numbers);
