@@ -4,7 +4,6 @@ function arr_re(array) {
     let arr=[];
     for (let i = array.length;i>0; i--) {
        arr.push(array.pop());
-     
     }
     return arr;
 }
